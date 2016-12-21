@@ -1,7 +1,7 @@
 # Daily-Scrolls
 Catholic Mass Readings and Bible in interlinear Greek and Hebrew
 
-Currently only supports the USCCB calendar.
+Currently only supports the the English translation and the USCCB calendar.
 
 Bible functionality coming soon.
 
