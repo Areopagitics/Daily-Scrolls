@@ -1,0 +1,74 @@
+Metadata-Version: 2.0
+Name: splash
+Version: 2.2.2
+Summary: A javascript rendered with a HTTP API
+Home-page: https://github.com/scrapinghub/splash
+Author: Scrapinghub
+Author-email: info@scrapinghub.com
+License: BSD
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Environment :: No Input/Output (Daemon)
+Classifier: Topic :: Internet :: WWW/HTTP
+Requires-Dist: Twisted (<16.3.0)
+Requires-Dist: qt5reactor
+Requires-Dist: psutil
+Requires-Dist: adblockparser
+Requires-Dist: xvfbwrapper
+Requires-Dist: funcparserlib
+Requires-Dist: Pillow
+
+=======================================
+Splash - A javascript rendering service
+=======================================
+
+.. image:: https://img.shields.io/travis/scrapinghub/splash/master.svg
+   :alt: Build Status
+   :target: https://travis-ci.org/scrapinghub/splash
+
+.. image:: https://img.shields.io/codecov/c/github/scrapinghub/splash/master.svg
+   :alt: Coverage report
+   :target: http://codecov.io/github/scrapinghub/splash?branch=master
+
+.. image:: https://img.shields.io/badge/GITTER-join%20chat-green.svg
+   :alt: Join the chat at https://gitter.im/scrapinghub/splash
+   :target: https://gitter.im/scrapinghub/splash
+
+Splash is a javascript rendering service with an HTTP API. It's a lightweight
+browser with an HTTP API, implemented in Python using Twisted and QT.
+
+It's fast, lightweight and state-less which makes it easy to distribute.
+
+Documentation
+-------------
+
+Documentation is available here:
+http://splash.readthedocs.org/
+
+Using Splash with Scrapy
+------------------------
+
+To use Splash with Scrapy, please refer to the `scrapy-splash library`_.
+
+Support
+-------
+
+Open source support is provided here in GitHub. Please `create a question
+issue`_ (ie. issue with "question" label).
+
+Commercial support is also available by `Scrapinghub`_.
+
+.. _create a question issue: https://github.com/scrapinghub/splash/issues/new?labels=question
+.. _Scrapinghub: http://scrapinghub.com
+.. _scrapy-splash library: https://github.com/scrapy-plugins/scrapy-splash
+
+

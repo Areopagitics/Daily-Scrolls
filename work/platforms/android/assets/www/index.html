@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, width=device-width, target-densitydpi=device-dpi" />
+        
+        <script src= "js/app.js" ></script>
+
+        <script src= "js/jquery-3.1.1.min.js" ></script>
+        <script src= "js/jquery-1.11.1.min.js" ></script>
+        <script src= "js/jquery.mobile-1.4.5.min.js" ></script>
+        <script src= "js/jtsage-datebox-4.0.0.jqm.min.js"></script>
+        
+        <script src= "js/main.js" ></script> 
+
+        <link rel= "stylesheet"  type= text/css  href= "css/index.css" >
+        <link rel= "stylesheet"  href= "css/jquery.mobile-1.4.5.minq.css" />
+        <link rel= "stylesheet"  href= "css/theme-classic.css" />
+
+        <link rel= "stylesheet"  type= text/css  href= "css/all.css" >
+
+    </head>
+    
+    
+        <body id="main">
+            <div data-role="page" id="main">
+
+                <a id="rds-btn" data-ajax="false" href="readings.html"   data-role="button" class="main-btn ui-btn ui-btn-e ui-btn-corner-all">Mass Readings</a>
+                
+                <a id="bible-btn" href="#donation" data-rel="popup" data-role="button" class="main-btn ui-btn ui-btn-e ui-btn-corner-all">Bible</a>
+                
+ 
+                <div data-role="popup" id="donation" title="Coming Soon!">
+                    <div data-role="header">
+                        <h1>Coming Soon!</h1>
+                    </div>
+
+                  <h2 class="diatext">support the development with a donation</h2>
+                    <a onclick="window.open('https://www.paypal.me/Areopagitics', '_system')"  data-role="button" class="main-btn ui-btn ui-btn-e ui-btn-corner-all">Donate</a>
+                    
+                    
+                    
+                    <h2 class="diatext">install the <a onclick="window.open('https://play.google.com/store/apps/details?id=com.paypal.android.p2pmobile&hl=en', '_system')" >Paypal App</a> first for greater security</h2>
+                    
+                </div>
+                
+                
+                <a id="donate" onclick="window.open('https://www.paypal.me/Areopagitics', '_system')"  data-role="button" class="main-btn ui-btn ui-btn-b ui-btn-corner-all">Donate</a>
+                
+                                
+                
+                <script type="text/javascript" src="cordova.js"></script>
+                <script type="text/javascript" src="js/index.js"></script>
+
+            </div><!-- /page one -->
+
+        </body>
+</html>

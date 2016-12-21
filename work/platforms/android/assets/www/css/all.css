@@ -1,0 +1,172 @@
+
+@font-face {
+    font-family: "sbl";
+    src: url("../font/sbl.ttf") format("truetype");   
+}
+
+
+.foreign,.pronunciation{
+    
+    font-family: sbl;
+}
+
+
+/*  main page   */
+
+
+#main {
+    
+    background-image: url(../img/scrolls.jpg);
+    background-size: cover;
+    
+    
+}
+
+.diatext{
+    
+}
+
+.main-btn {
+    margin: 40% 20% 15% 20%;
+    font-size: 2em;
+    
+    
+}
+
+#donate{
+    max-width: 25%;
+    margin: 15% auto;
+}
+
+
+
+
+
+/*  datebox   */
+
+
+.ui-datebox-container {
+    max-width: 40em;
+    margin: auto;
+    padding: 3%;
+    text-align: center;
+
+}
+
+.ui-corner-all{
+    border-radius: 1em;
+}
+
+
+
+
+h4{
+    font-size: 160%;
+    text-shadow: none;
+}
+
+.ui-datebox-datebox-group{
+    padding: 4%;
+
+}
+.ui-datebox-datebox-button{
+    width: auto;
+    height: 4em;
+}
+
+
+
+#home-btn{
+    margin: 2em;
+}
+
+
+.ui-input-text{
+    
+    border-color: gainsboro;
+    border-radius: 2em;
+
+}
+
+input{
+    text-align: center !important;
+    
+}
+
+.ui-icon-plus::after{
+    background-color: green;
+}
+
+.ui-icon-minus::after{
+    background-color: red;
+}
+.ui-icon-check::after{
+    background-color: limegreen;
+}
+
+
+
+
+
+
+
+/*  readings page  */
+
+#daily-mass{
+    
+    align-items: center
+}
+
+
+.ui-icon-check{
+    font-size: 2em;
+
+}
+#buffer{
+    
+    margin: 10em 1em 0 1em;
+    
+}
+
+
+
+
+
+
+.chunk {
+    display: inline-block;
+    vertical-align: top;
+
+}
+
+h2{
+    color: orange;
+}
+
+#FirstReading, #Psalm, #SecondReading,#Gospel{
+
+
+
+}
+
+.pronunciation,.foreign,.translation,.chunk {
+    padding: 2px;
+
+}
+
+.pronunciation,.foreign,.translation {
+    text-align: center;
+}
+
+.pronunciation{
+    font-style: italic;
+    color: #bfbfbf;
+    direction: ltr;
+}
+.translation {
+    color: #999999;
+    direction: ltr;
+ }
+ .foreign{
+    font-size: 165%;
+ }

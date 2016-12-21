@@ -1,0 +1,93 @@
+import re
+import scrapy
+from scrapy.item import Item, Field
+from scrapy.linkextractors import LinkExtractor
+from scrapy.spiders import CrawlSpider,Rule
+
+# for debugging in cmd >scrapy shell "http://www.usccb.org/bible/readings/100817.cfm" and for exporting to csv>scrapy crawl readings -o Test.csv
+
+class ReadingsItem(Item):
+    day = Field()
+    date = Field()
+    first_reading = Field()
+    psalm = Field()
+    second_reading = Field()
+    alleluia = Field()
+    gospel = Field()
+
+class MySpider(CrawlSpider):
+    name = 'readings'
+    #download_delay = 2
+    allowed_domains = ['usccb.org']
+    start_urls = [
+        'http://www.usccb.org/bible/readings/123117.cfm'
+    ]
+
+    
+    rules = (
+        # Extract links matching 'category.php' (but not matching 'subsection.php')
+        # and follow links from them (since no callback means follow=True by default).
+        #Rule(LinkExtractor(allow=('category\.php', ), deny=('subsection\.php', ))),
+
+        # Extract links matching 'item.php' and parse them with the spider's method parse_item
+        Rule(LinkExtractor(allow=('readings\/\d\d\d\d17\.cfm', )), callback='parse_attr', follow= True),
+    )
+     
+    
+    def parse_attr(self, response):
+        item = ReadingsItem()
+        try:
+            item["day"] = response.xpath('//h3/text()')[2].extract()
+            item["date"] = response.xpath('//h1/text()')[0].extract()
+        except IndexError:
+            pass
+        #item["first_reading"] = response.xpath('//div[@class="bibleReadingsWrapper"]/h4/a/text()')[0].extract()
+        #item["psalm"] = response.xpath('//div[@class="bibleReadingsWrapper"]/h4/a/text()')[1].extract()
+        readings = {'Reading 1':'first_reading', 'Psalm':'psalm', 'Reading 2':'second_reading', 'Verse Before':'alleluia', 'Alleluia':'alleluia', 'Gospel':'gospel'}
+        first = response.xpath('//div[@class="bibleReadingsWrapper"]//h4//text()').extract()
+
+        for r,i in readings.iteritems():
+            for f in first:
+                if r in f:
+                    n = first.index(f)
+                    try:
+                        item[i] = first[n+1]
+                    except IndexError:
+                        pass
+        return item 
+       
+        
+    """  
+    def parse(self, response):
+        dweeks = response.xpath('//h3').extract()
+        dates = response.xpath('//h1').extract()
+        readings = response.xpath('//h4').extract()
+        items = []
+        for dweek in dweeks:
+            item = ReadingsItem()
+            days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+            for day in days:
+                if dweek.find(day):
+                    item["day"] = day
+                    if day == 'Sunday':
+                        dweek.replace(day, 'Week')
+                stoplist = ('of', 'the')
+                for s in stoplist:
+                    dweek.replace(s, '')
+                    item["week"] = dweek
+            items.append(item)
+        return items
+
+
+response.xpath('//div[@id="navDates"]/a/text()')[1].extract()
+    links = response.xpath('//a[@class="hdrlnk"]/@href').extract()
+
+
+        for dweek in dweeks:
+            item = ReadingsItem()
+            item["week"] = dweek.select("a/dweek()").extract()
+            item["day"] = dweek.select("a/@href").extract()
+            items.append(item)
+        return items
+
+        """

@@ -1,0 +1,18 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-sqlite-ext": {
+            "PACKAGE_NAME": "areopagitics.DailyScrolls"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "areopagitics.DailyScrolls"
+        }
+    },
+    "dependent_plugins": {}
+}
