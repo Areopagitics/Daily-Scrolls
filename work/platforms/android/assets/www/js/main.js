@@ -2,6 +2,9 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 
 
+
+//global variables
+
 var db;
 var q =  '"' ;
 var bt = ' between ';

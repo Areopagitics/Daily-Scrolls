@@ -11,44 +11,124 @@
 }
 
 
-/*  main page   */
+body {
+    opacity : 0;
+    transition : opacity 400ms ease; 
+}
+
+
+.loaded {
+   opacity : 1;
+}
+
+
+
+/*  main page  --------------------------------- */
 
 
 #main {
-    
     background-image: url(../img/scrolls.jpg);
-    background-size: cover;
+    background-size: 200%;
+    background-position: center;
     
     
 }
 
 .diatext{
-    
+    text-align: center;
 }
 
 .main-btn {
-    margin: 40% 20% 15% 20%;
+    margin: 40% 20% 30% 20%;
     font-size: 2em;
     
     
 }
 
-#donate{
-    max-width: 25%;
-    margin: 15% auto;
+
+
+/*  readings page  ----------------------------*/
+
+#daily-mass{
+
+}
+
+
+#deviceready{
+    
+}
+
+.chunk {
+    display: inline-block;
+    vertical-align: top;
+
+}
+
+h2{
+    color: orange;
+}
+
+
+.pronunciation,.foreign,.translation,.chunk {
+    padding: 2px;
+
+}
+
+.pronunciation,.foreign,.translation {
+    text-align: center;
+}
+
+.pronunciation{
+    font-style: italic;
+    color: #bfbfbf;
+    direction: ltr;
+}
+.translation {
+    color: #999999;
+    direction: ltr;
+ }
+ .foreign{
+    font-size: 165%;
+ }
+
+
+#buffer{
+
+    background-image: url(../img/scrolls.jpg);
+    background-size: 200%;
+    background-position: center;
+    padding: 1em;
+    font-size: 160%;
+    min-height: 100vh;
+    
+
+}
+
+#buffer2{
+    margin-top: 40%;
+    margin-bottom: 10%;
+}
+
+#widget{
+    
+    
+}
+
+#home-btn{
+    
+    
 }
 
 
 
 
-
-/*  datebox   */
+/*  datebox ----------------------------   */
 
 
 .ui-datebox-container {
-    max-width: 40em;
+    max-width: 600px;
     margin: auto;
-    padding: 3%;
+    padding: 2%;
     text-align: center;
 
 }
@@ -61,7 +141,7 @@
 
 
 h4{
-    font-size: 160%;
+  
     text-shadow: none;
 }
 
@@ -85,88 +165,26 @@ h4{
     
     border-color: gainsboro;
     border-radius: 2em;
-
-}
-
-input{
-    text-align: center !important;
+    
     
 }
 
+.form-control{
+    text-align: center !important;
+    font-size: 160% !important;
+    background: white !important;
+    
+
+}
+
 .ui-icon-plus::after{
-    background-color: green;
+    background-color: limegreen;
 }
 
 .ui-icon-minus::after{
     background-color: red;
 }
 .ui-icon-check::after{
-    background-color: limegreen;
+    background-color: green;
 }
 
-
-
-
-
-
-
-/*  readings page  */
-
-#daily-mass{
-    
-    align-items: center
-}
-
-
-.ui-icon-check{
-    font-size: 2em;
-
-}
-#buffer{
-    
-    margin: 10em 1em 0 1em;
-    
-}
-
-
-
-
-
-
-.chunk {
-    display: inline-block;
-    vertical-align: top;
-
-}
-
-h2{
-    color: orange;
-}
-
-#FirstReading, #Psalm, #SecondReading,#Gospel{
-
-
-
-}
-
-.pronunciation,.foreign,.translation,.chunk {
-    padding: 2px;
-
-}
-
-.pronunciation,.foreign,.translation {
-    text-align: center;
-}
-
-.pronunciation{
-    font-style: italic;
-    color: #bfbfbf;
-    direction: ltr;
-}
-.translation {
-    color: #999999;
-    direction: ltr;
- }
- .foreign{
-    font-size: 165%;
- }

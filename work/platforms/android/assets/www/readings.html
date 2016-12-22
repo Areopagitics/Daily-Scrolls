@@ -23,25 +23,24 @@
     </head>
     
     
-        <body>
+        <body onload="document.body.classList.add('loaded')">
            <div data-role="page" id="daily-mass" class="ui-body-b">
+               
+               <div id="deviceready" class="ui-body-c"></div>
+               
+                <div id="buffer"> 
+                                        
+                    <div id="buffer2">
 
-                <div id="deviceready" class="ui-body-c"></div>
-                
-                <div id="widget" >
-                    <div id="buffer">
                         <a id="home-btn" data-ajax="false"  href="index.html"  data-role="button" class="ui-btn ui-btn-a ui-btn-corner-all">Return Home</a>
-
-                        <input type= text class="ui-body-e" id= datebox  onchange= "yayB(this.value); disInput();"  data-role= datebox  min= 2017-01-01  max= 2017-12-3  data-options='{"mode":"datebox","overrideDateFormat":"%Y-%m-%d","overrideDateFieldOrder": ["y","M","d"], "useInline" :true,  "hideInput" :true, "themeInput": "c"}'>
-
-                    </div> 
-
                         
-                     
-                </div> 
-                
-                
-                
+                        <div id="widget" >
+                            <input type= text class="ui-body-e" id= datebox  onchange= "yayB(this.value); disInput();"  data-role= datebox  min= 2017-01-01  max= 2017-12-3  data-options='{"mode":"datebox","overrideDateFormat":"%Y-%m-%d","overrideDateFieldOrder": ["y","M","d"], "useInline" :true,  "hideInput" :true, "overrideSetDateButtonLabel":"Get Readings", "repButton": false}'>
+
+                        </div> 
+                    </div>
+               </div> 
+               
                 <script type="text/javascript" src="cordova.js"></script>
                 <script type="text/javascript" src="js/index.js"></script>
 
