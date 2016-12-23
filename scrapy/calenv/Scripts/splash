@@ -1,4 +1,0 @@
-#!c:\users\mloch\desktop\scrapy\calenv\scripts\python.exe
-
-from splash.server import main
-main()

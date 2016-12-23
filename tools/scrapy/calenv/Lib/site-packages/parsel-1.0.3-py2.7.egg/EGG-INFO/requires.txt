@@ -1,0 +1,4 @@
+w3lib>=1.8.0
+lxml
+six>=1.5.2
+cssselect>=0.9

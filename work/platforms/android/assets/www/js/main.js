@@ -46,9 +46,9 @@ function errorCB(err) {
 
 function getReadings(tx, results) {
     var items = results.rows.item(0);
-    var columns = {FirstReading : 'First Reading', Psalm : 'Psalm', SecondReading : 'Second Reading', Gospel:'Gospel'};
+    var columns = {FirstReading : 'First Reading', Psalm : 'Psalm', SecondReading : 'Second Reading', Acclamation: 'Acclamation', Gospel:'Gospel'};
     var day = items.Day
-    var textDay= '<h2 id= day >' + day + '</p> <h2 id= title ></h2><div id= readings ></div>  <h2 id= title ></h2><div id= readings ></div>  <h2 id= title ></h2><div id= readings ></div>  <h2 id= title ></h2><div id= readings ></div>' ;                                 //day title
+    var textDay= '<h2 id= day >' + day + '</p> <h2 id= title ></h2><div id= readings ></div>  <h2 id= title ></h2><div id= readings ></div>  <h2 id= title ></h2><div id= readings ></div> <h2 id= title ></h2><div id= readings ></div> <h2 id= title ></h2><div id= readings></div>' ;                             //day title
     document.getElementById("deviceready").innerHTML = textDay;
     for(key in columns){
         if (items[key]){                                                   //readings loop
