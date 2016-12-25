@@ -19,4 +19,12 @@ TODO LIST
 
 - add Bible pages
 - link readings to the Bible chapters
-- add special days to the liturgical calendar * | download the 
+- add special days to the liturgical calendar * (i.e. Easter, Holy Week, etc)
+
+
+
+
+
+
+* download the https://github.com/Areopagitics/Daily-Scrolls/blob/master/databases/USCCB/Mass%20Readings%202017-EWTN%20website.csv and add
+columns for missing readings (ThirdReading, SecondPsalm, FourthReading, ...)
