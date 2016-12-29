@@ -23,7 +23,7 @@
     </head>
     
     
-        <body onload="document.body.classList.add('loaded')">
+        <body id="readings">
            <div data-role="page" id="daily-mass" class="ui-body-b">
                
                <div id="deviceready" class="ui-body-c"></div>
@@ -32,10 +32,10 @@
                                         
                     <div id="buffer2">
 
-                        <a id="home-btn" data-ajax="false"  href="index.html"  data-role="button" class="ui-btn ui-btn-a ui-btn-corner-all">Return Home</a>
+                        <a id="home-btn"   onclick= changePage("index.html") data-role="button" class="change-page ui-btn ui-btn-a ui-btn-corner-all">Return Home</a>
                         
                         <div id="widget" >
-                            <input type= text class="ui-body-e" id= datebox  onchange= "yayB(this.value); disInput();"  data-role= datebox  min= 2017-01-01  max= 2017-12-3  data-options='{"mode":"datebox","overrideDateFormat":"%Y-%m-%d","overrideDateFieldOrder": ["y","M","d"], "useInline" :true,  "hideInput" :true, "overrideSetDateButtonLabel":"Get Readings", "repButton": false}'>
+                            <input type= text class="ui-body-e" id= datebox  onchange= "yayB(this.value); disInput();"  data-role= datebox  min= 2016-12-24  max= 2017-12-2  data-options='{"mode":"datebox","overrideDateFormat":"%Y-%m-%d","overrideDateFieldOrder": ["y","M","d"], "useInline" :true,  "hideInput" :true, "overrideSetDateButtonLabel":"Get Readings", "repButton": false}'>
 
                         </div> 
                     </div>

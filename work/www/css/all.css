@@ -1,26 +1,25 @@
 
 @font-face {
     font-family: "sbl";
-    src: url("../font/sbl.ttf") format("truetype");   
+    src: url("../font/sbl.otf") format("opentype");   
 }
 
 
-.foreign,.pronunciation{
+.hebrew{
     
     font-family: sbl;
 }
 
 
-body {
-    opacity : 0;
-    transition : opacity 400ms ease; 
+.greek{
+    
+    font-family: sbl;
 }
 
-
-.loaded {
-   opacity : 1;
+.pronunciation{
+    
+    font-family: sbl;
 }
-
 
 
 /*  main page  --------------------------------- */

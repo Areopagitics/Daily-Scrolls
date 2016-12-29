@@ -18,16 +18,32 @@ var vr =  'Verse' ;
 var op = ' (' ;
 var cp =  ') ' ;
 var base = 'select * from Content where Book=';
+var x = 0;
+var y = 0;
 
 function onDeviceReady() {
     db = window.sqlitePlugin.openDatabase({name: "bible.db", location: 'default', createFromLocation: 1});
     window.open = cordova.InAppBrowser.open;
-    dbMaint();
+    disInput();
 }
+
+function changePage(url) {
+    $("body").hide(900, function(){window.location = url});
+
+}
+
+
+$(document).ready(function(){
+    $(".ui-icon-check").on("click", function(){
+        $("body").hide(200);
+        $("body").show(3800);
+    });
+});
 
 //  datebox issues
 
-function dbMaint(){
+
+function disInput(){
     
     $('.form-control').attr('readonly', true); // disable keyboard input
 }
@@ -48,19 +64,20 @@ function getReadings(tx, results) {
     var items = results.rows.item(0);
     var columns = {FirstReading : 'First Reading', Psalm : 'Psalm', SecondReading : 'Second Reading', Acclamation: 'Acclamation', Gospel:'Gospel'};
     var day = items.Day
-    var textDay= '<h2 id= day >' + day + '</p> <h2 id= title ></h2><div id= readings ></div>  <h2 id= title ></h2><div id= readings ></div>  <h2 id= title ></h2><div id= readings ></div> <h2 id= title ></h2><div id= readings ></div> <h2 id= title ></h2><div id= readings></div>' ;                             //day title
+    var textDay= '<h2 id= day >' + day + '</p>' ;                                 //day title
     document.getElementById("deviceready").innerHTML = textDay;
     for(key in columns){
         if (items[key]){                                                   //readings loop
             var reading = items[key];
             var readingID = key;
+            document.getElementById("deviceready").innerHTML += '<h2 id= title-' + readingID + '></h2><div id=' + readingID + '></div>';
             var readingTitle = columns[key];
             var bookname = reading.match(/(\d )?[A-z]+/)[0];
             var book = getBookNb(bookname);
             var unclean_chapters = reading.match(/\d+:/g);
             var chapters = clean(unclean_chapters);
             var b = reading.split(':');
-            var sqlselect = base + book + and;                     //select book
+            var sqlselect = base + book + and + op;                     //select book
             for(var i=1; i < b.length; i++){                               //chapters loop
                 var chapter = chapters[i-1];
                 if (i != 1){
@@ -92,21 +109,34 @@ function getReadings(tx, results) {
                     sqlselect += op + vr + equals + verse + cp;                   //select single verse (Nb,)
                 }
                 sqlselect += cp + cp;
-
+            }
+            sqlselect += cp
+            console.log(sqlselect);
+            x += 1;
+            eval("var dynamicVar" + x + "= {id:readingID};");
+            if (book<=39){
+                document.getElementById(readingID).dir ="rtl";
+                eval("dynamicVar" + x + ".lang = 'hebrew' ;");
+                eval("dynamicVar" + x + ".pron = 'hebrew-pron' ;");                         
+              }
+            else{
+                eval("dynamicVar" + x + ".lang = 'greek' ;");
+                eval("dynamicVar" + x + ".pron = 'greek-pron' ;");  
             }
             tx.executeSql(sqlselect, [], function(tx, results) {   // get readings  from database
+                        y += 1;
                         var text ='<div class= outer >';
                         var len = results.rows.length;
                         for (var i = 0; i < len; i++) {
                         text +=
                         '<div class= chunk >'+
-                        '<div class= foreign >'+
+                        '<div class= "foreign ' + eval("dynamicVar" + y).lang + '" >' +
                         results.rows.item(i).Original +
                         '</div>'+
                         '<div class= translation >'+
                         results.rows.item(i).Translation +
                         '</div>'+
-                        '<div class= pronunciation >'+
+                        '<div class= "pronunciation ' + eval("dynamicVar" + y).pron + '" >'+
                         results.rows.item(i).Pronunciation +
                         '</div>'+
                         '</div>';
@@ -114,20 +144,15 @@ function getReadings(tx, results) {
                         }
                         text += '</div>' ;
 
-                         if (book<=39){
-                          document.getElementById("readings").dir ="rtl";
-                          $("#readings:first").addClass("hebrew");    
-                          }
-                        else{
-                            $("#readings:first").addClass("greek");
-                        }
-                        document.getElementById("readings").innerHTML = text;
-                        document.getElementById("readings").id = "reading";
+                        
+                        document.getElementById(eval("dynamicVar" + y).id).innerHTML = text;
+                        
                     }, errorCB);
-            document.getElementById("title").innerHTML = readingTitle + " (" + reading +  ")" ;
-            document.getElementById("title").id =  readingID;
+            document.getElementById('title-' + readingID).innerHTML = readingTitle + " (" + reading +  ")" ;
+           
         }
     }
+
 }
 
 

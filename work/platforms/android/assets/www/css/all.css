@@ -1,26 +1,32 @@
 
 @font-face {
     font-family: "sbl";
-    src: url("../font/sbl.ttf") format("truetype");   
+    src: url("../font/sbl.otf") format("opentype");   
+}
+@font-face {
+    font-family: "heb";
+    src: url("../font/SBL_Hbrw.ttf") format("truetype");   
+}
+@font-face {
+    font-family: "greek";
+    src: url("../font/SBL_grk.ttf") format("truetype");   
 }
 
-
-.foreign,.pronunciation{
+.hebrew{
     
     font-family: sbl;
 }
 
 
-body {
-    opacity : 0;
-    transition : opacity 400ms ease; 
+.greek{
+    
+    font-family: sbl;
 }
 
-
-.loaded {
-   opacity : 1;
+.pronunciation{
+    
+    font-family: sbl;
 }
-
 
 
 /*  main page  --------------------------------- */
