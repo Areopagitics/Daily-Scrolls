@@ -7,11 +7,12 @@ Bible functionality coming soon.
 
 Support the developers at https://www.paypal.me/Areopagitics
 
-If you would like to help with developing the app please contact areopagitics@gmail.com. There is some simple non-programming work that could be done, like updating databases with special day liturgy readings (i.e. Holy Week, Easter...) - currently only 5 of the liturgical readings are supported per day: First, Psalm, Second, Acclamation (still waiting for clean version), Gospel. See below for more instructions.
+If you would like to help with developing the app please contact areopagitics@gmail.com. There is some simple non-programming work that could be done, like updating databases with special day liturgy readings (i.e. Holy Week, Easter...). See below for more instructions.
 
-For the Apple (iOS, iphone) or Windows Phone versions which could be pretty easy to make, consider paying for the for the Developers fee:
+For the Apple (iOS, iphone) or Windows Phone versions which could be pretty easy to make, consider paying for the Developers fee:
 
-Apple charges $99 USD/year
+Apple charges $99 USD/year 
+
 Microsoft $19 only once
 
 -------------------------------------------------------------------------------------------------------------------------------------------
