@@ -11,8 +11,7 @@ If you would like to help with developing the app please contact areopagitics@gm
 
 For the Apple (iOS, iphone) or Windows Phone versions which could be pretty easy to make, consider paying for the Developers fee:
 
-Apple charges $99 USD/year
-Microsoft $19 only once
+Apple charges $99 USD/year \nMicrosoft $19 only once
 
 -------------------------------------------------------------------------------------------------------------------------------------------
 TODO LIST
