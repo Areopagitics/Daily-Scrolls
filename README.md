@@ -20,7 +20,6 @@ Microsoft $19 only once
 -------------------------------------------------------------------------------------------------------------------------------------------
 TODO LIST
 
-- add Bible pages
-- link readings to the Bible chapters
 - add special days to the liturgical calendar - Easter, Holy Week, etc.
   Right click and save as csv the file at https://raw.githubusercontent.com/Areopagitics/Daily-Scrolls/master/databases/USCCB/Mass%20Readings%202017-EWTN%20website.csv and add columns for missing readings (ThirdReading, SecondPsalm, FourthReading, ...)
+- add settings page
