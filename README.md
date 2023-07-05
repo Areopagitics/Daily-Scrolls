@@ -8,18 +8,3 @@ Currently only supports the the English translation and the USCCB calendar.
 Privacy Policy: No data is collected except for emails you send for feeback
 
 Support the developers at https://www.paypal.me/Areopagitics
-
-If you would like to help with developing the app please contact areopagitics@gmail.com. There is some simple non-programming work that could be done, like updating databases with special day liturgy readings (i.e. Holy Week, Easter...). See below for more instructions.
-
-For the Apple (iOS, iphone) or Windows Phone versions which could be pretty easy to make, consider paying for the Developers fee:
-
-Apple charges $99 USD/year 
-
-Microsoft $19 only once
-
--------------------------------------------------------------------------------------------------------------------------------------------
-TODO LIST
-
-- add special days to the liturgical calendar - Easter, Holy Week, etc.
-  Right click and save as csv the file at https://raw.githubusercontent.com/Areopagitics/Daily-Scrolls/master/databases/USCCB/Mass%20Readings%202017-EWTN%20website.csv and add columns for missing readings (ThirdReading, SecondPsalm, FourthReading, ...)
-- add settings page
