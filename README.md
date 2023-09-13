@@ -5,6 +5,8 @@ Interlinear English format and scrollable
 
 Currently only supports the the English translation and the USCCB calendar.
 
-Privacy Policy: No data is collected except for emails you send for feeback
+Privacy Policy: No data is collected except for emails you send for feeback.
+
+Terms of Service (EULA): Payments and Subscriptions will be according to Apple's (for iOS) or Google's (for Android) store policies. 
 
 Support the developers at https://www.paypal.me/Areopagitics
